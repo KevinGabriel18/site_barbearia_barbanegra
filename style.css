@@ -1,0 +1,53 @@
+#logo{
+    width: 130px;
+    max-width: 900px;
+    height: auto;
+
+}
+
+nav{
+    
+    background-color: #ffffff;
+    width: 100%;
+    overflow: hidden;
+    position: fixed; /* Fixa a barra no topo da página */
+    top: 0; /* Posiciona a barra no topo */
+    left: 0; /* Garante que a barra comece no extremo esquerdo */
+    z-index: 1000;
+    height: 80px; /* Altura fixa para a barra de navegação */
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 0 20px; /* Espaçamento interno */
+}
+
+h1{
+    margin-top: 100px;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Coloca os itens lado a lado */
+}
+
+/* Estilização dos itens da lista */
+nav ul li {
+    margin: 0 10px; /* Espaçamento entre os itens */
+}
+
+/* Estilização dos links */
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+}
+
