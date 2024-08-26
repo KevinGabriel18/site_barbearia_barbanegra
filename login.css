@@ -71,3 +71,34 @@ nav a:hover {
 #botao:hover {
     background-color: rgb(230, 230, 230);
 }
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    width: 350px;
+    top: 25%;
+    left: 40%;
+    position: absolute;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    
+ }
+
+ form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: rgb(6, 3, 3);
+    font-weight: bold;
+}
+
+#nome_login{
+    color: rgb(0, 0, 0);
+}

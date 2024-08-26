@@ -4,45 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barba Negra</title>
-    <style>
-
-     div.login-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 400px;
-        width: 300px;
-        top: 20%;
-        left: 40%;
-        position: absolute;
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-        padding: 20px;
-     }
-    
-
-    </style>
+    <link rel="stylesheet" href="login.css">
 
 </head>
 <body background="https://png.pngtree.com/background/20230519/original/pngtree-checkered-flooring-in-a-barber-shop-picture-image_2651920.jpg">
     
+    <nav>
+        <a href="index.html"><img id="logo" src="logo_barbanegra.png" alt="logo_barbanegra"></a>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="contato.html">Contato</a></li>
+          </ul>
+      </nav>
+  
+      <div class="botao_cadastro">
+          <a href="login.html"><button id="botao">Entrar</button></a>
+          <a href="cadastro.html"><button id="botao">Cadastrar</button></a>
+        </div>
+
+
     <div class="login-container">
-        <h2>Login</h2>
-        <form id="login-form" action="sua_action_aqui" method="post">
-            <div class="input-container">
-                <label for="username">Usuário</label>
-                <input type="text" id="username" name="username" required>
-                <small class="error-message"></small>
-            </div>
-            <div class="input-container">
-                <label for="password">Senha</label>
-                <input type="password" id="password" name="password" required>
-                <small class="error-message"></small>
-            </div>
-            <button type="submit">Entrar</button>
-            <p class="forgot-password"><a href="#">Esqueceu a senha?</a></p>
+        <form method="POST" class="formLogin">
+            <h1 id="nome_login">Login</h1>
+            <p>Digite os seus dados de acesso no campo abaixo.</p>
+            <label for="email">E-mail</label><br>
+            <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+            <label for="password">Senha</label><br>
+            <input type="password" placeholder="Digite sua senha" />
+            <a href="/">Esqueci minha senha</a>
+            <input type="submit" value="Acessar"/>
         </form>
     </div>
 
