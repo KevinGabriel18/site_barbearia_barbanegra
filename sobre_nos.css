@@ -71,82 +71,12 @@ nav a:hover {
     background-color: rgb(230, 230, 230);
 }
 
-
-.catalogo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-   
-}
-
-.catalogo{
-    margin-top: 100px;
-    display: flex;
-    gap: 20px;
-    
-}
-
-.container-catalogo {
-    width: 150px;
-    height:200px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
-   
-    
-    
-}
-
-.catalogo-img {
-    width: 120px;
-    height:140px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    margin: 15px;
-   display: flex;
-}
-
-#entrei{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(161, 161, 161);
-    color: rgb(0, 0, 0);
-    border-radius: 10px;
-    margin: 10px;
-    
-}
-
-.resenha {
-    flex-direction: column;
-    border-radius: 10px;
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   background-color: #f4f4f4;
-   padding: 50px 0px;
-
-   width: 100%;
-}
-
-.container-resenha {
-    width: 750px;
-    height: 150px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 28px;
-    display: flex;
-}
-
 .sobre-nos {
     padding: 50px;
     color: #ffffff;
     text-align: left; 
-    max-width: 800px; 
-     
+    max-width: 1200px; 
+    margin: auto; 
     background-color: #333333d1; 
     border-radius: 10px;
 }
@@ -193,27 +123,4 @@ nav a:hover {
 .membro-equipe p {
     font-size: 0.9em;
     color: #666; 
-}
-
-.contato {
-    display: flex;
-    flex-direction: column;
-    color: #ffffff;
-    text-align: center;  
-    top: 40%;
-    left: 75%;
-    position: absolute;
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-    padding: 50px;
-}
-
-#contato- {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(161, 161, 161);
-    color: rgb(0, 0, 0);
-    border-radius: 10px;
-    margin: 10px;
 }
