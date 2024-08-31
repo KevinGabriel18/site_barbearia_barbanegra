@@ -223,15 +223,6 @@ nav a:hover {
    
 }
 
-#contato- {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(161, 161, 161);
-    color: rgb(0, 0, 0);
-    border-radius: 10px;
-    margin: 10px;
-}
 .contato i{
     font-size: 40px;
     color: white;
