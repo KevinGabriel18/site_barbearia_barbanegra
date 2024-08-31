@@ -1,3 +1,7 @@
+body{
+    background-image: url(fundo_site.png);
+}
+
 #logo{
     width: 130px;
     max-width: 900px;
@@ -146,7 +150,7 @@ nav a:hover {
     color: #ffffff;
     text-align: left; 
     max-width: 800px; 
-     
+    margin: auto;
     background-color: #333333d1; 
     border-radius: 10px;
 }
@@ -169,12 +173,23 @@ nav a:hover {
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 30px;
+    margin-left: 10%;
     justify-content: flex-start; 
+
+}
+
+#titulo_equipe{
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: center;
+   
 }
 
 .membro-equipe {
-    text-align: left; 
+    text-align: center; 
     max-width: 200px;
+    
 }
 
 .membro-equipe img {
@@ -200,12 +215,12 @@ nav a:hover {
     flex-direction: column;
     color: #ffffff;
     text-align: center;  
-    top: 40%;
-    left: 75%;
     position: absolute;
     border-radius: 10px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-    padding: 50px;
+    top: 80px;
+    left: 90%;
+   
 }
 
 #contato- {
@@ -215,5 +230,10 @@ nav a:hover {
     background-color: rgb(161, 161, 161);
     color: rgb(0, 0, 0);
     border-radius: 10px;
+    margin: 10px;
+}
+.contato i{
+    font-size: 40px;
+    color: white;
     margin: 10px;
 }
