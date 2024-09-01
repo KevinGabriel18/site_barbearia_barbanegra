@@ -103,3 +103,21 @@ nav a:hover {
 #nome_login{
     color: rgb(0, 0, 0);
 }
+
+@media screen and (max-width: 900px){
+    
+    #logo{
+        max-width: 90px;
+    }
+    nav a {
+        padding: 30px 5px;
+    }
+    .botao_cadastro {
+        right: 5px; 
+        top: 28px;
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    }
