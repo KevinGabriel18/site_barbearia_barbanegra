@@ -1,78 +1,108 @@
 body{
-    background-image: url(fundo_site.png);
+    background-image: url(/img/fundo_site.png);
 }
 
-#logo{
-    width: 130px;
-    max-width: 900px;
-    height: auto;
-}
-
-nav{
-    background-color: #ffffff;
-    width: 100%;
-    overflow: hidden;
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    z-index: 1000;
-    height: 80px;
-    display: flex;
-    align-items: center; 
-    padding: 0 20px; 
-}
-
-h1{
-    margin-top: 100px;
-    color: #ffffff;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-nav ul {
-    list-style-type: none; 
+* {
     margin: 0;
     padding: 0;
-    display: flex; 
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
 }
 
-nav li {
-    margin: 0 10px; 
+header {
+    width: 100%;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 3;
 }
-
-nav a {
-    color: black;
-    text-decoration: none;
-    padding: 14px 16px;
-    display: block;
-}
-
-nav a:hover {
-    background-color: #ddd;
-}
-
-.botao_cadastro {
-    z-index: 1000;
-    position: fixed;
-    right: 20px; 
-    top: 28px;
+#navbar {
+    width: 100%;
     display: flex;
-    gap: 10px; 
+    align-items: center;
+    justify-content: space-between;
 }
-
-#botao{
-    background-color: rgb(255, 255, 255);
+#nav_logo{
+    width: 50px;
+    height: auto;
+}
+#nav_list {
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+.nav-item a {
+    text-decoration: none;
+    color: #1d1d1dad;
+    font-weight: 600;
+}
+.nav-item.active a {
     color: rgb(0, 0, 0);
-    border-radius: 10px;
-    text-align: center;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    top:50%;
-    left:120%;
 }
 
-#botao:hover {
-    background-color: rgb(230, 230, 230);
+.btn-default{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 10px 14px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.btn-default:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#mobile_btn {
+    display: none;
+}
+#mobile_menu {
+    display: none;
+}
+
+.butao-cont{
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+@media screen and (max-width: 768px) {
+    #nav_list,
+    #navbar .btn-default {
+        display: none;
+    }
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+    } 
+    .butao-cont{
+        list-style: none;
+    }
 }
 
 
@@ -229,19 +259,14 @@ nav a:hover {
     margin: 10px;
 }
 @media screen and (max-width: 900px){
-    
-#logo{
-    max-width: 90px;
-}
-nav a {
-    padding: 30px 5px;
-}
-.botao_cadastro {
-    right: 5px; 
-    top: 28px;
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-    
-}
+    .contato{
+        display: none;
+        
+        
+    }
+
+    .container-resenha{
+        width: 90%;
+    }
+
 }
