@@ -56,34 +56,56 @@ $(document).ready(function () {
 
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('benefitsModal');
-    const closeBtn = document.querySelector('.close');
-    
+    const closeBtn = modal.querySelector('.close');
+    const openBtn = document.getElementById('showBenefits');
+
     // Função para abrir o modal
-    function openModal() {
+    openBtn.addEventListener('click', (event) => {
+        event.stopPropagation(); // Evita que o clique no botão dispare eventos externos
         modal.classList.add('open');
-    }
+    });
+
+    // Fechar o modal ao clicar no botão de fechar
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('open');
+    });
 
     // Fechar o modal ao clicar fora do conteúdo
-    window.onclick = (event) => {
-        if (event.target == modal) {
+    window.addEventListener('click', (event) => {
+        // Verifica se o clique foi fora do modal e não no botão ou no modal
+        if (!modal.contains(event.target) && event.target !== openBtn) {
             modal.classList.remove('open');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const textElement = document.getElementById('typing-text');
+    const text = "CONFIRA NOSSOS BENEFICIOS PARA MEMBROS";
+    let index = 0;
+
+    const typeText = () => {
+        if (index < text.length) {
+            textElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeText, 100); // Ajusta a velocidade de digitação aqui
         }
     };
 
-    // Função para observar a visibilidade do modal
-    const observer = new IntersectionObserver((entries) => {
+    // Função que inicia a animação quando o elemento entrar na tela
+    const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                modal.classList.remove('open');  // Fecha o modal quando ele sair da tela
+            if (entry.isIntersecting) {
+                // Quando o elemento estiver na tela, começa a digitar
+                typeText();
+                observer.unobserve(entry.target); // Para de observar o elemento após a animação começar
             }
         });
     }, {
-        threshold: 0.1  // Define que o modal deve sair 10% da tela para ser considerado fora de vista
+        threshold: 0.5 // Aciona a animação quando 50% do elemento estiver visível na tela
     });
 
-    // Começa a observar o modal
-    observer.observe(modal);
-
-    // Exemplo de ativação do modal (adicione ao botão que desejar)
-    document.getElementById('showBenefits').addEventListener('click', openModal);
+    // Começa a observar o elemento
+    observer.observe(textElement);
 });
+
